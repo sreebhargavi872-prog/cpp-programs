@@ -21,3 +21,6 @@ C++
 
 ### Author
 Sri Bhargavi
+## Output Screenshot
+
+![Student Grade Calculator Output](student-grade-output.png)
