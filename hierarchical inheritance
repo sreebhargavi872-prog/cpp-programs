@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Hierarchical Inheritance
+class parent
+{
+public:
+    string Iq, color;
+    int height;
+
+    parent(string iq, string c, int h)
+    {
+        Iq = iq;
+        color = c;
+        height = h;
+    }
+};
+
+class child_1 : public parent
+{
+public:
+    child_1(string iq, string c, int h) : parent(iq, c, h)
+    {
+    }
+};
+
+class child_2 : public parent
+{
+public:
+    child_2(string iq, string c, int h) : parent(iq, c, h)
+    {
+    }
+
+    void display()
+    {
+        cout << "IQ level is: " << Iq << endl;
+        cout << "Color is: " << color << endl;
+        cout << "Height is: " << height << endl;
+    }
+};
+
+int main()
+{
+    child_2 c2("High", "White", 6);
+    c2.display();
+
+    return 0;
+}
