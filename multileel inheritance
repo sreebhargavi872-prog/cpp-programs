@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+class A
+{
+	int x;
+	public:
+		void showA(int a)
+		{
+			cout<<"class A value is:"<<endl;
+		}
+};
+class B: public A
+{
+	public:
+		void showB()
+		{
+			cout<<"class B extends classs A"<<endl;
+		}
+};
+class C: public B
+{
+	public:
+		void showC()
+		{
+			cout<<"class C extends class B"<<endl;
+		}
+};
+class D: public C
+{
+	public:
+		void showD()
+		{
+			cout<<"class D extends class C"<<endl;
+		}
+};
+main()
+{
+	D d;
+	d.showA(10);
+	d.showB();
+	d.showC();
+	d.showD();
+}
